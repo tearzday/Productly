@@ -15,9 +15,13 @@
   <body>
     <header class="header">
       <div class="container">
-        <a href="#" class="logo"
-          ><img src="./img/icon/logo-productly.svg" alt="Logo"
-        /></a>
+        <a href="#" class="logo">
+          <object
+            class="logo-object"
+            data="./img/icon/logo-productly.svg"
+            type="image/svg+xml"
+          ></object
+        ></a>
         <nav class="header__navigation">
           <ul class="navigation">
             <li class="navigation__link">Home</li>
@@ -36,39 +40,77 @@
       <section class="promo">
         <div class="container">
           <div class="promo__content">
-            <h1>The Design Thinking superpowers</h1>
-            <p>
+            <h1 class="promo__title">The Design Thinking superpowers</h1>
+            <p class="promo__text">
               Tools, tutorials, design and innovation experts, all in one place!
               The most intuitive way to imagine your next user experience.
             </p>
             <div class="promo__buttons">
               <button class="button button_colored">Get started</button>
               <a href="#" class="link-button">
-                <span class="ico icon_play"></span>
-                Watch the Video
+                <span class="ico ico_play"></span>
+                <span class="link-button__text">Watch the Video</span>
               </a>
             </div>
           </div>
           <div class="promo_images">
-            <img src="./img/background/peoples.svg" alt="" />
+            <img
+              src="./img/promo/promo.svg"
+              alt="The Design Thinking superpowers"
+            />
           </div>
         </div>
       </section>
       <section class="tools">
         <div class="container">
-          <h2>We design tools to unveil your superpowers</h2>
+          <h2 class="tools__title">
+            We design tools to unveil your superpowers
+          </h2>
           <div class="layout-4-column">
             <div class="tool">
-              <div class="tool-icon">
-                <div class="icon-square icon-square__lilium"></div>
+              <div class="tool__icon">
+                <div class="icon-square icon-square_lilium">
+                  <span class="ico ico_cursor"></span>
+                </div>
               </div>
-              <h4>First click tests</h4>
-              <p>While most people enjoy casino gambling,</p>
+              <h4 class="tool__title">First click tests</h4>
+              <p class="tool__text">While most people enjoy casino gambling</p>
+            </div>
+            <div class="tool">
+              <div class="tool__icon">
+                <div class="icon-square icon-square_yellow">
+                  <span class="ico ico_snake"></span>
+                </div>
+              </div>
+              <h4 class="tool__title">Design surveyss</h4>
+              <p class="tool__text">
+                Sports betting, lottery and bingo playing for the fun
+              </p>
+            </div>
+            <div class="tool">
+              <div class="tool__icon">
+                <div class="icon-square icon-square_red">
+                  <span class="ico ico_heart"></span>
+                </div>
+              </div>
+              <h4 class="tool__title">Preference tests</h4>
+              <p class="tool__text">The Myspace page defines the individual.</p>
+            </div>
+            <div class="tool">
+              <div class="tool__icon">
+                <div class="icon-square icon-square_blue">
+                  <span class="ico ico_hourglass"></span>
+                </div>
+              </div>
+              <h4 class="tool__title">Five second tests</h4>
+              <p class="tool__text">
+                Personal choices and the overall personality of the person.
+              </p>
             </div>
           </div>
-          <button class="button button_colored tools__button">
-            Sign Up now
-          </button>
+          <div class="tools__button">
+            <button class="button button_colored">Sign Up now</button>
+          </div>
         </div>
       </section>
       <section class="strategies">
@@ -78,17 +120,94 @@
             Join 40,000+ other marketers and get proven strategies on email
             marketing
           </p>
-          <div class="strategies__tags">
+          <div class="strategies__tags tags">
             <div class="tag tag_selected">All</div>
             <div class="tag tag_bordered">Art</div>
+            <div class="tag tag_bordered">Culture</div>
+            <div class="tag tag_bordered">Design</div>
           </div>
-          <div class="layout-3-column">
+          <div class="layout-3-column strategy__container">
             <div class="strategy block-shadowed">
               <img src="./img/strategies/pic1.jpg" alt="strategy" />
-              <h3>Increasing Prosperity With Positive Thinking</h3>
-              <div class="strategies__tags">
-                <div class="tag tag_colored">Art</div>
-                <div class="tag tag_colored">Design</div>
+              <div class="stratagy__content">
+                <h3>Increasing Prosperity With Positive Thinking</h3>
+                <div class="strategy__tags tags">
+                  <div class="tag tag_colored">Art</div>
+                  <div class="tag tag_colored">Design</div>
+                </div>
+              </div>
+            </div>
+            <div class="strategy block-shadowed">
+              <img src="./img/strategies/pic2.jpg" alt="strategy" />
+              <div class="stratagy__content">
+                <h3>Motivation Is The First Step To Success</h3>
+                <div class="strategy__tags tags">
+                  <div class="tag tag_colored">Culture</div>
+                </div>
+              </div>
+            </div>
+            <div class="strategy block-shadowed">
+              <img src="./img/strategies/pic3.jpg" alt="strategy" />
+              <div class="stratagy__content">
+                <h3>Success Steps For Your Personal Or Business Life</h3>
+                <div class="strategy__tags tags">
+                  <div class="tag tag_colored">Culture</div>
+                  <div class="tag tag_colored">Design</div>
+                  <div class="tag tag_colored">Art</div>
+                </div>
+              </div>
+            </div>
+            <div class="strategy block-shadowed">
+              <img src="./img/strategies/pic4.jpg" alt="strategy" />
+              <div class="stratagy__content">
+                <h3>
+                  Success Steps For Your Personal Or Business Life Plus Funny
+                  Image on the Back
+                </h3>
+                <div class="strategy__tags tags">
+                  <div class="tag tag_colored">Culture</div>
+                  <div class="tag tag_colored">Art</div>
+                  <div class="tag tag_colored">Design</div>
+                </div>
+              </div>
+            </div>
+            <div class="strategy block-shadowed">
+              <img src="./img/strategies/pic5.jpg" alt="strategy" />
+              <div class="stratagy__content">
+                <h3>Increasing Prosperity With Positive Thinking</h3>
+                <div class="strategy__tags tags">
+                  <div class="tag tag_colored">Design</div>
+                </div>
+              </div>
+            </div>
+            <div class="strategy block-shadowed">
+              <img src="./img/strategies/pic1.jpg" alt="strategy" />
+              <div class="stratagy__content">
+                <h3>Increasing Prosperity With Positive Thinking</h3>
+                <div class="strategy__tags tags">
+                  <div class="tag tag_colored">Art</div>
+                  <div class="tag tag_colored">Design</div>
+                </div>
+              </div>
+            </div>
+            <div class="strategy block-shadowed">
+              <img src="./img/strategies/pic2.jpg" alt="strategy" />
+              <div class="stratagy__content">
+                <h3>Motivation Is The First Step To Success</h3>
+                <div class="strategy__tags tags">
+                  <div class="tag tag_colored">Culture</div>
+                </div>
+              </div>
+            </div>
+            <div class="strategy block-shadowed">
+              <img src="./img/strategies/pic3.jpg" alt="strategy" />
+              <div class="stratagy__content">
+                <h3>Success Steps For Your Personal Or Business Life</h3>
+                <div class="strategy__tags tags">
+                  <div class="tag tag_colored">Culture</div>
+                  <div class="tag tag_colored">Design</div>
+                  <div class="tag tag_colored">Art</div>
+                </div>
               </div>
             </div>
           </div>
@@ -113,7 +232,23 @@
                 <p class="employee__title">Product Manager</p>
                 <a href="mailto:kathyr@gmail.com">kathyr@gmail.com</a>
               </div>
+              <img src="./img/people-avatar/avatar2.png" alt="employee" />
+            </div>
+            <div class="employee block-shadowed">
+              <div class="employee__content">
+                <h5>Alexandra Boyarskaya</h5>
+                <p class="employee__title">Support Marketing Specialist</p>
+                <a href="mailto:kathyr@gmail.com">alexandrab@gmail.com</a>
+              </div>
               <img src="./img/people-avatar/avatar1.png" alt="employee" />
+            </div>
+            <div class="employee block-shadowed">
+              <div class="employee__content">
+                <h5>Melani Amini</h5>
+                <p class="employee__title">Photographer</p>
+                <a href="mailto:kathyr@gmail.com">melania@gmail.com</a>
+              </div>
+              <img src="./img/people-avatar/avatar3.png" alt="employee" />
             </div>
           </div>
         </div>
@@ -143,11 +278,12 @@
             </div>
             <div class="contact__form">
               <form action="" method="post">
-                <div class="layout-2-column">
+                <div class="layout-2-column contact__line">
                   <input type="text" placeholder="Your name" name="name" />
                   <input type="text" placeholder="Your email" name="email" />
                 </div>
                 <textarea
+                  class="contact__line"
                   name="question"
                   placeholder="What do you want to ask?"
                   id=""
@@ -168,7 +304,7 @@
         <div class="container">
           <div class="layout-4-column">
             <a href="#" class="logo">
-              <img src="" alt="Logo" />
+              <img src="./img/icon/logo-productly.svg" alt="Logo" />
             </a>
             <div class="footer-navigation">
               <h4>Quick Links</h4>

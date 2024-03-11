@@ -4,5 +4,8 @@
   },
   "devDependencies": {
     "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "normalize-scss": "^8.0.0"
   }
 }

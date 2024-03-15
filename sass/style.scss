@@ -9,13 +9,17 @@
 @import 'base/logo';
 @import 'base/icons';
 @import 'base/tags';
+@import 'base/hamburger';
 
 @import 'layouts/container';
 @import 'layouts/header';
 @import 'layouts/columns';
+@import 'layouts/footer';
 
 @import 'components/promo';
 @import 'components/contact';
 @import 'components/navigation';
 @import 'components/tools';
 @import 'components/strategies';
+@import 'components/about';
+@import 'components/employee';

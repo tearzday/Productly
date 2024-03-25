@@ -28,7 +28,7 @@ main {
 
 /**
    * Correct the font size and margin on `h1` elements within `section` and
-   * `article` contexts in Chrome, Firefox, and Safari.
+   * `strategy` contexts in Chrome, Firefox, and Safari.
    */
 h1 {
   font-size: 2em;
@@ -313,7 +313,7 @@ section,
 main,
 footer,
 header,
-article {
+strategy {
   display: block;
 }
 
@@ -335,6 +335,17 @@ h5 {
 
 .promo__text, .footer-navigation__links, .link-button, h1 {
   font-family: "Popins", Verdana, sans-serif;
+}
+
+.modal::-webkit-scrollbar {
+  width: 5px;
+}
+.modal::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey;
+}
+.modal::-webkit-scrollbar-thumb {
+  background-color: #7752be;
+  border-radius: 10px;
 }
 
 html {
@@ -567,6 +578,7 @@ h5 {
 .tag {
   border-radius: 90px;
   padding: 0 14px;
+  cursor: pointer;
   font-style: normal;
   font-size: 1.3rem;
   font-weight: normal;
@@ -617,6 +629,43 @@ h5 {
 .hamburger__line {
   top: calc(50% - 1.5px);
   left: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(80, 80, 80, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: relative;
+  border-radius: 10px;
+  width: 675px;
+  min-height: 120px;
+  max-height: 90%;
+  overflow: auto;
+  background-color: #ffffff;
+}
+@media (max-width: 768px) {
+  .modal {
+    width: 90%;
+  }
+}
+
+.modal__close-icon {
+  position: absolute;
+  top: 30px;
+  right: 26px;
+  cursor: pointer;
+}
+.modal__close-icon svg {
+  pointer-events: none;
 }
 
 .container {
@@ -684,6 +733,11 @@ h5 {
 }
 .layout-3-column > * {
   flex-basis: 30%;
+}
+.layout-3-column:after {
+  content: "";
+  width: 30%;
+  display: block;
 }
 
 .layout-2-column {
@@ -1029,6 +1083,9 @@ h5 {
   flex-direction: column;
   align-items: center;
 }
+.strategy_hidden {
+  display: none;
+}
 @media (max-width: 768px) {
   .strategy {
     overflow: hidden;
@@ -1049,14 +1106,14 @@ h5 {
   }
 }
 
-.stratagy__content {
+.strategy__content {
   padding: 24px 33px 26px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.stratagy__name {
+.strategy__name {
   margin: 0 0 29px;
   text-align: left;
   flex-grow: 1;

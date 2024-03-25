@@ -25,6 +25,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  &_hidden {
+    display: none;
+  }
   @include media-tablet {
     overflow: hidden;
   }
@@ -42,14 +45,14 @@
   }
 }
 
-.stratagy__content {
+.strategy__content {
   padding: 24px 33px 26px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-.stratagy__name {
+.strategy__name {
   margin: 0 0 29px;
   text-align: left;
   flex-grow: 1;

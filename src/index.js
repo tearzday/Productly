@@ -2,81 +2,15 @@ import { Strategy } from './js/Strategy';
 import { StrategyModal } from './js/StrategyModal';
 import { Modal } from './js/Modal';
 
-const DATA = [
-  {
-    id: 1,
-    title: 'Increasing Prosperity With Positive Thinking',
-    urlToImage: './src/img/strategies/pic1.jpg',
-    tags: ['Art', 'Design'],
-    content:
-      'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
-    date: '20.03.2024'
-  },
-  {
-    id: 2,
-    title: 'Motivation Is The First Step To Success',
-    urlToImage: './src/img/strategies/pic2.jpg',
-    tags: ['Culture'],
-    content:
-      'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
-    date: '20.03.2024'
-  },
-  {
-    id: 3,
-    title: 'Success Steps For Your Personal Or Business Life',
-    urlToImage: './src/img/strategies/pic3.jpg',
-    tags: ['Culture', 'Design', 'Art'],
-    content:
-      'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
-    date: '20.03.2024'
-  },
-  {
-    id: 4,
-    title:
-      'Success Steps For Your Personal Or Business Life Plus Funny Image on the Back',
-    urlToImage: './src/img/strategies/pic4.jpg',
-    tags: ['Culture', 'Design', 'Art'],
-    content:
-      'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
-    date: '20.03.2024'
-  },
-  {
-    id: 5,
-    title: 'Increasing Prosperity With Positive Thinking',
-    urlToImage: './src/img/strategies/pic5.jpg',
-    tags: ['Design'],
-    content:
-      'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
-    date: '20.03.2024'
-  },
-  {
-    id: 6,
-    title: 'Increasing Prosperity With Positive Thinking',
-    urlToImage: './src/img/strategies/pic1.jpg',
-    tags: ['Art', 'Design'],
-    content:
-      'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
-    date: '20.03.2024'
-  },
-  {
-    id: 7,
-    title: 'Motivation Is The First Step To Success',
-    urlToImage: './src/img/strategies/pic2.jpg',
-    tags: ['Culture'],
-    content:
-      'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
-    date: '20.03.2024'
-  },
-  {
-    id: 8,
-    title: 'Success Steps For Your Personal Or Business Life',
-    urlToImage: './src/img/strategies/pic3.jpg',
-    tags: ['Culture', 'Design', 'Art'],
-    content:
-      'Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?',
-    date: '20.03.2024'
-  }
-];
+let DATA = [];
+
+// Получение strategy
+fetch('data-strategy.json')
+  .then(res => res.json())
+  .then(body => {
+    DATA = body;
+  })
+  .catch(err => console.error('Ошибка:', err));
 
 window.onload = function () {
   //Render Strategies

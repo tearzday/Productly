@@ -3,6 +3,10 @@
   padding: 35px;
   position: relative;
   width: calc(30% - 32px);
+  @include media-laptop {
+    width: 80%;
+    margin-bottom: 15px;
+  }
 }
 
 .employee-container {

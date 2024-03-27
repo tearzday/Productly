@@ -14,7 +14,7 @@ export class Strategy {
     strategy.setAttribute('data-id', this.id);
 
     this.urlToImage &&
-      (template += ` <img src="${this.urlToImage}" alt="strategy" />`);
+      (template += ` <img class="strategy__img" src="${this.urlToImage}" alt="strategy" />`);
 
     if (this.title || this.tags) {
       template += `<div class="strategy__content">`;

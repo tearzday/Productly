@@ -3,6 +3,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = (env, options) => {
   const isProduction = options.mode === 'production';
@@ -40,14 +41,7 @@ module.exports = (env, options) => {
         },
         {
           test: /\.(png|jpe?g|gif|svg)$/i,
-          use: [
-            {
-              loader: 'file-loader'
-            }
-          ],
-          options: {
-            esModule: false
-          }
+          type: 'asset/resource'
         },
         {
           test: /\.html$/i,
@@ -62,6 +56,9 @@ module.exports = (env, options) => {
       }),
       new MiniCssExtractPlugin({
         filename: 'style.css'
+      }),
+      new CopyPlugin({
+        patterns: [{ from: 'src/data/data-strategy.json' }]
       })
     ]
   };

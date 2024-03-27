@@ -28,19 +28,20 @@
   &_hidden {
     display: none;
   }
-  @include media-tablet {
-    overflow: hidden;
-  }
 }
 
 .strategy-container {
   > * {
     margin-bottom: 30px;
-    @include media-tablet {
+    @include media-laptop {
       flex-basis: 48%;
+      overflow: hidden;
+    }
+    @include media-tablet {
+      width: 400px;
     }
     @include media-big-mobile {
-      flex-basis: 100%;
+      width: 300px;
     }
   }
 }
@@ -56,4 +57,10 @@
   margin: 0 0 29px;
   text-align: left;
   flex-grow: 1;
+}
+
+.strategy-modal__content {
+  img {
+    width: 100%;
+  }
 }

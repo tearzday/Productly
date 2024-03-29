@@ -16,6 +16,7 @@
 .header__logo-line {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .header__buttons {
@@ -25,7 +26,31 @@
       margin-left: 0px;
     }
   }
+  @include media-tablet {
+    > .button {
+      padding: 11px 10px 13px;
+      margin-left: 5px;
+      &:first-child {
+        margin-left: 0px;
+      }
+    }
+  }
   @include media-big-mobile {
+    display: none;
+  }
+}
+
+.header__navigation {
+  transition: 0.5s;
+  @include media-tablet {
+    position: absolute;
+    left: 0;
+    top: 50px;
+  }
+}
+
+.header__navigation_hidden {
+  @include media-tablet {
     display: none;
   }
 }

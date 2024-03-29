@@ -58,7 +58,7 @@ module.exports = (env, options) => {
         filename: 'style.css'
       }),
       new CopyPlugin({
-        patterns: [{ from: 'src/data/data-strategy.json' }]
+        patterns: [{ from: 'src/data/data.json' }]
       })
     ]
   };

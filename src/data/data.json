@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Strategy",
+    "value": [
+      {
+        "id": 1,
+        "title": "Increasing Prosperity With Positive Thinking",
+        "urlToImage": "https://i.ibb.co/RBYdbsz/pic1.jpgg",
+        "tags": ["Art", "Design"],
+        "content": "Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",
+        "date": "20.03.2024"
+      },
+      {
+        "id": 2,
+        "title": "Motivation Is The First Step To Success",
+        "urlToImage": "https://i.ibb.co/qyDp8KW/pic2.jpg",
+        "tags": ["Culture"],
+        "content": "Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",
+        "date": "20.03.2024"
+      },
+      {
+        "id": 3,
+        "title": "Success Steps For Your Personal Or Business Life",
+        "urlToImage": "https://i.ibb.co/VxvMTRb/pic3.jpg",
+        "tags": ["Culture", "Design", "Art"],
+        "content": "Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",
+        "date": "20.03.2024"
+      },
+      {
+        "id": 4,
+        "title": "Success Steps For Your Personal Or Business Life Plus Funny Image on the Back",
+        "urlToImage": "https://i.ibb.co/RHrv1jQ/pic5.jpg",
+        "tags": ["Culture", "Design", "Art"],
+        "content": "Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",
+        "date": "20.03.2024"
+      },
+      {
+        "id": 5,
+        "title": "Increasing Prosperity With Positive Thinking",
+        "urlToImage": "https://i.ibb.co/RHrv1jQ/pic5.jpg",
+        "tags": ["Design"],
+        "content": "Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",
+        "date": "20.03.2024"
+      },
+      {
+        "id": 6,
+        "title": "Increasing Prosperity With Positive Thinking",
+        "urlToImage": "https://i.ibb.co/RBYdbsz/pic1.jpg",
+        "tags": ["Art", "Design"],
+        "content": "Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",
+        "date": "20.03.2024"
+      },
+      {
+        "id": 7,
+        "title": "Motivation Is The First Step To Success",
+        "urlToImage": "https://i.ibb.co/qyDp8KW/pic2.jpg",
+        "tags": ["Culture"],
+        "content": "Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",
+        "date": "20.03.2024"
+      },
+      {
+        "id": 8,
+        "title": "Success Steps For Your Personal Or Business Life",
+        "urlToImage": "https://i.ibb.co/VxvMTRb/pic3.jpg",
+        "tags": ["Culture", "Design", "Art"],
+        "content": "Knowing yourself is the first, and a very critical step in the process of planning your future. How can you figure out what you want to do with your life if you don’t know: What am I going to do with the  rest of my life? What is my dream job? What do I enjoy doing? What’s my passion? What kind of career fits my personality?",
+        "date": "20.03.2024"
+      }
+    ]
+  },
+  {
+    "name": "Tools",
+    "value": [
+      {
+        "iconClass": "ico_cursor",
+        "iconColor": "icon-square_lilium",
+        "title": "First click tests",
+        "text": "While most people enjoy casino gambling"
+      },
+      {
+        "iconClass": "ico_snake",
+        "iconColor": "icon-square_yellow",
+        "title": "Design surveyss",
+        "text": "Sports betting, lottery and bingo playing for the fun"
+      },
+      {
+        "iconClass": "ico_heart",
+        "iconColor": "icon-square_red",
+        "title": "Preference tests",
+        "text": "The Myspace page defines the individual."
+      },
+      {
+        "iconClass": "ico_hourglass",
+        "iconColor": "icon-square_blue",
+        "title": "Five second tests",
+        "text": "Personal choices and the overall personality of the person."
+      }
+    ]
+  }
+]

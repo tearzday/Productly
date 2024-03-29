@@ -1,27 +1,46 @@
+import { Header } from './js/Header';
 import { Strategy } from './js/Strategy';
 import { StrategyModal } from './js/StrategyModal';
 import { Modal } from './js/Modal';
+import { Tool } from './js/Tool';
 
-let DATA = [];
+let STRATEGY = [];
+let TOOLS = [];
 
-// Получение strategy
-fetch('data-strategy.json')
+// Получение data
+fetch('data.json')
   .then(res => res.json())
   .then(body => {
-    DATA = body;
+    body.forEach(data => {
+      data.name === 'Strategy' ? (STRATEGY = data.value) : '';
+      data.name === 'Tools' ? (TOOLS = data.value) : '';
+    });
   })
   .catch(err => console.error('Ошибка:', err));
 
 window.onload = function () {
+  renderHeaderToDom();
+
+  if (TOOLS) {
+    renderToolsToDom();
+  }
   //Render Strategies
-  if (DATA) {
+  if (STRATEGY) {
     renderStrategiesToDom();
   }
+
   //Tags
   addTagsClickHandler();
 
   // Generate Base Modal from Modal Class
   addToolsClickHandler();
+};
+
+const renderHeaderToDom = () => {
+  const header = new Header();
+  document.body.prepend(header.generateHeader());
+
+  header.toggleMenu();
 };
 
 const addTagsClickHandler = () => {
@@ -73,18 +92,38 @@ const filterStrategyBySelectedTag = selectedTag => {
   });
 };
 
+/*
+const generator = data => {
+  let container = document.querySelector('.tool-container');
+  let tools = [];
+  data.forEach(tool => {
+    tools.push(new Tool(tool));
+  });
+  tools.forEach(tool => tool.renderToolToDom(container));
+};*/
+
+const renderToolsToDom = () => {
+  let toolsContainer = document.querySelector('.tool-container');
+  generateTools(TOOLS).forEach(tool => {
+    toolsContainer.append(tool.generateTool());
+  });
+};
+
+const generateTools = data => {
+  let tools = [];
+  data.forEach(tool => {
+    tools.push(new Tool(tool));
+  });
+  return tools;
+};
+
 const renderStrategiesToDom = () => {
-  let strategiesContainer = getStrategiesContainer();
-  generateStrategies(DATA).forEach(strategy => {
+  let strategiesContainer = document.querySelector('.strategy-container');
+  generateStrategies(STRATEGY).forEach(strategy => {
     strategiesContainer.append(strategy.generateStrategy());
   });
 
   addStrategyClickHandler();
-};
-
-const getStrategiesContainer = () => {
-  const strategiesContainer = document.querySelector('.strategy-container');
-  return strategiesContainer;
 };
 
 const generateStrategies = data => {
@@ -128,7 +167,7 @@ const addStrategyClickHandler = () => {
 };
 
 const getClickDate = id => {
-  return DATA.find(strategy => strategy.id == id);
+  return STRATEGY.find(strategy => strategy.id == id);
 };
 
 const renderStrategyModalWindow = strategy => {

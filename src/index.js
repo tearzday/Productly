@@ -1,11 +1,13 @@
 import { Header } from './js/Header';
+import { Promo } from './js/Promo';
+import { Tools } from './js/Tools';
 import { Strategy } from './js/Strategy';
 import { StrategyModal } from './js/StrategyModal';
 import { Modal } from './js/Modal';
-import { Tool } from './js/Tool';
 
 let STRATEGY = [];
 let TOOLS = [];
+const MAIN = document.querySelector('main');
 
 // Получение data
 fetch('data.json')
@@ -20,9 +22,11 @@ fetch('data.json')
 
 window.onload = function () {
   renderHeaderToDom();
+  renderToolsToDom();
+  renderPromoToDom();
 
   if (TOOLS) {
-    renderToolsToDom();
+    //renderToolsToDom();
   }
   //Render Strategies
   if (STRATEGY) {
@@ -36,12 +40,28 @@ window.onload = function () {
   addToolsClickHandler();
 };
 
+/* Header */
 const renderHeaderToDom = () => {
   const header = new Header();
   document.body.prepend(header.generateHeader());
 
   header.queryMenu();
 };
+
+/* Promo */
+const renderPromoToDom = () => {
+  const promo = new Promo();
+  MAIN.prepend(promo.generatePromo());
+};
+
+/* Tools */
+
+const renderToolsToDom = () => {
+  const tools = new Tools(TOOLS);
+  MAIN.prepend(tools.generateToolsComponent());
+};
+
+/* Tags */
 
 const addTagsClickHandler = () => {
   document
@@ -92,20 +112,7 @@ const filterStrategyBySelectedTag = selectedTag => {
   });
 };
 
-const renderToolsToDom = () => {
-  let toolsContainer = document.querySelector('.tool-container');
-  generateTools(TOOLS).forEach(tool => {
-    toolsContainer.append(tool.generateTool());
-  });
-};
-
-const generateTools = data => {
-  let tools = [];
-  data.forEach(tool => {
-    tools.push(new Tool(tool));
-  });
-  return tools;
-};
+/* Strategy */
 
 const renderStrategiesToDom = () => {
   let strategiesContainer = document.querySelector('.strategy-container');
@@ -123,6 +130,8 @@ const generateStrategies = data => {
   });
   return strategies;
 };
+
+/* Modal from Tools */
 
 const addToolsClickHandler = () => {
   document

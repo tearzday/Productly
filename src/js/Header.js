@@ -19,7 +19,6 @@ export class Header {
         link: '#contact'
       }
     ];
-    this.isOpen = false;
   }
 
   generateHeader() {

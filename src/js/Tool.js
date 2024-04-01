@@ -8,10 +8,9 @@ export class Tool {
 
   generateTool() {
     let template = '';
-    let tool = document.createElement('div');
-    tool.className = 'tool';
 
     if (this.iconClass || this.iconColor) {
+      template += `<div class="tool">`;
       template += `<div class="tool__icon">`;
 
       template += `<div class="icon-square ${this.iconColor}">`;
@@ -24,7 +23,8 @@ export class Tool {
     this.title && (template += `<h4 class="tool__title">${this.title}</h4>`);
     this.text && (template += `<p class="tool__text">${this.text}</p>`);
 
-    tool.innerHTML = template;
-    return tool;
+    template += `</div>`;
+
+    return template;
   }
 }

@@ -1,7 +1,24 @@
 export class Header {
   constructor() {
     this.logo = 'logo-productly.svg';
-    this.menuItem = ['Home', 'Services', 'About', 'Product'];
+    this.menuItem = [
+      {
+        name: 'Home',
+        link: 'index.html'
+      },
+      {
+        name: 'Strategies',
+        link: '#strategies'
+      },
+      {
+        name: 'About',
+        link: '#about'
+      },
+      {
+        name: 'Contacts',
+        link: '#contact'
+      }
+    ];
     this.isOpen = false;
   }
 
@@ -12,7 +29,7 @@ export class Header {
 
     let navigation = '';
     this.menuItem.forEach(item => {
-      navigation += ` <li class="navigation__link">${item}</li>`;
+      navigation += ` <li class="navigation__link"><a class="link" href="${item.link}">${item.name}</a></li>`;
     });
 
     template += `
@@ -40,12 +57,36 @@ export class Header {
     return header;
   }
 
-  toggleMenu() {
+  queryMenu() {
     const hamburgerMenu = document.querySelector('.hamburger');
     const headerNav = document.querySelector('.header__navigation');
-    hamburgerMenu.addEventListener('click', () => {
-      headerNav.classList.toggle('header__navigation_hidden');
-      hamburgerMenu.classList.toggle('hamburger_open');
+    const headerLink = document.querySelectorAll('.link');
+
+    this.navigationLink(headerLink, headerNav, hamburgerMenu);
+
+    this.toggleMenu(hamburgerMenu, headerNav, hamburgerMenu);
+  }
+
+  toggleMenu(clickItem, toggleItem, hamburgerIcon) {
+    clickItem.addEventListener('click', () => {
+      toggleItem.classList.toggle('header__navigation_hidden');
+      hamburgerIcon.classList.toggle('hamburger_open');
+    });
+  }
+
+  navigationLink(headerLink, headerNav, hamburgerMenu) {
+    headerLink.forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        const scrollItemId = link.getAttribute('href');
+        if (scrollItemId[0] === '#') {
+          document.querySelector(scrollItemId).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+      this.toggleMenu(link, headerNav, hamburgerMenu);
     });
   }
 }

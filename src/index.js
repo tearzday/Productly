@@ -40,7 +40,7 @@ const renderHeaderToDom = () => {
   const header = new Header();
   document.body.prepend(header.generateHeader());
 
-  header.toggleMenu();
+  header.queryMenu();
 };
 
 const addTagsClickHandler = () => {
@@ -91,16 +91,6 @@ const filterStrategyBySelectedTag = selectedTag => {
     });
   });
 };
-
-/*
-const generator = data => {
-  let container = document.querySelector('.tool-container');
-  let tools = [];
-  data.forEach(tool => {
-    tools.push(new Tool(tool));
-  });
-  tools.forEach(tool => tool.renderToolToDom(container));
-};*/
 
 const renderToolsToDom = () => {
   let toolsContainer = document.querySelector('.tool-container');

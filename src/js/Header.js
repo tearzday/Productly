@@ -1,6 +1,6 @@
 export class Header {
   constructor() {
-    this.logo = 'logo-productly.svg';
+    this.logo = 'https://svgshare.com/i/14qW.svg';
     this.menuItem = [
       {
         name: 'Home',
@@ -38,7 +38,7 @@ export class Header {
                 <span class="hamburger__line"></span>
             </div>
             <a href="#" class="logo">
-                <img class="logo-img" alt="Logo company" src="https://svgshare.com/i/14qW.svg">
+                <img class="logo-img" alt="Logo company" src="${this.logo}">
             </a>
         </div>
         <nav class="header__navigation header__navigation_hidden">

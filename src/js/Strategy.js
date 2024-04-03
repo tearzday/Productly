@@ -9,10 +9,8 @@ export class Strategy {
   //strategy generator
   generateStrategy() {
     let template = '';
-    let strategy = document.createElement('div');
-    strategy.className = 'strategy block-shadowed';
-    strategy.setAttribute('data-id', this.id);
 
+    template += `<div class="strategy block-shadowed" data-id="${this.id}">`;
     this.urlToImage &&
       (template += ` <img class="strategy__img" src="${this.urlToImage}" alt="strategy" />`);
 
@@ -34,8 +32,8 @@ export class Strategy {
 
       template += `</div>`;
     }
+    template += `</div>`;
 
-    strategy.innerHTML = template;
-    return strategy;
+    return template;
   }
 }

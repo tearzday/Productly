@@ -16,8 +16,12 @@ fetch('data.json')
   .then(res => res.json())
   .then(body => {
     body.forEach(data => {
-      data.name === 'Strategy' ? (STRATEGY = data.value) : '';
-      data.name === 'Tools' ? (TOOLS = data.value) : '';
+      if (data.name === 'Strategy') {
+        STRATEGY = data.value;
+      }
+      if (data.name === 'Tools') {
+        TOOLS = data.value;
+      }
     });
   })
   .catch(err => console.error('Ошибка:', err));

@@ -15,7 +15,7 @@ module.exports = (env, options) => {
     entry: ['./src/index.js', './src/sass/style.scss'],
     output: {
       filename: 'script.js',
-      path: path.join(__dirname, '/dist')
+      path: path.join(__dirname, '/docs')
     },
     module: {
       rules: [
